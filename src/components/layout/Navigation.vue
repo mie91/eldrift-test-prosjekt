@@ -1,6 +1,6 @@
-<template
-  ><header>
-    <v-app-bar prominent>
+<template>
+  <header>
+    <v-toolbar>
       <v-container fluid>
         <v-row justify="center" align="center" class="navbar_main">
           <v-toolbar-items>
@@ -40,7 +40,7 @@
           </v-toolbar-items>
         </v-row>
       </v-container>
-    </v-app-bar>
+    </v-toolbar>
   </header>
 </template>
 
@@ -64,11 +64,6 @@ export default Vue.extend({
 
 .v-toolbar__content {
   color: $elblack;
-}
-
-.nav-btn {
-  @include basic-btn;
-  display: inline;
 }
 
 .nav-icon {

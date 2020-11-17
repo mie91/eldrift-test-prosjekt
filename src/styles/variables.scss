@@ -15,7 +15,16 @@ $elyellow: rgba(232,203,39, 1);
 $soft-gradient: linear-gradient(0deg, rgba(105,202,103,0.3) 0%, rgba(83,182,179,0.3) 100%);
 
 //Font-families//
-$poppins: "Poppins", "Arial", sans-serif;
+$body-font-family: 'Poppins', sans-serif;
+$font-size-root: 16px;
 
 //Base buttons//
+$btn-sizes: (
+  'default': 60,
+  'small': 50,
+  'medium': 60,
+  'large': 80,
+  'x-large': 100
+);
 
+//Borders//

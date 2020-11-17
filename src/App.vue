@@ -34,7 +34,8 @@
     </v-app-bar> -->
 
     <v-main>
-      <Navigation />
+      <Toolbar />
+
       <StartScreen />
     </v-main>
   </v-app>
@@ -43,14 +44,15 @@
 <script lang="ts">
 import Vue from "vue";
 import StartScreen from "./components/StartScreen.vue";
-import Navigation from "./components/layout/Navigation.vue";
+
+import Toolbar from "./components/layout/Toolbar.vue";
 
 export default Vue.extend({
   name: "App",
 
   components: {
-    Navigation,
-    StartScreen
+    StartScreen,
+    Toolbar
   },
 
   data: () => ({
@@ -63,8 +65,8 @@ export default Vue.extend({
 @import "./styles/style.scss";
 
 #app {
-  font-family: $poppins;
-  background: white;
+  /*   font-family: $poppins;
+  background: white; */
   background: $soft-gradient;
 }
 </style>
