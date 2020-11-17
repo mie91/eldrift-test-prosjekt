@@ -55,3 +55,15 @@ export default Vue.extend({
   })
 });
 </script>
+
+
+
+<style lang="scss">
+@import "./styles/style.scss";
+
+#app {
+  font-family: $poppins;
+  background: white;
+  background: $soft-gradient;
+}
+</style>
