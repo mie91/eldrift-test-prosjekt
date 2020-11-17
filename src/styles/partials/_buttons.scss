@@ -1,0 +1,14 @@
+
+
+@mixin basic-btn {
+    
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 50px;
+  }
+  
+  @mixin basic-btn-green {
+    @include basic-btn;
+    background-color: $elgreen;
+    color: $elwhite;
+  }
