@@ -37,7 +37,7 @@
           :to="link.route"
         >
           <v-list-item-action>
-            <v-icon color="elblack">{{ link.icon }}</v-icon>
+            <v-icon large color="elblack">{{ link.icon }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title>{{ link.text }}</v-list-item-title>
@@ -57,7 +57,7 @@ export default {
       links: [
         { icon: "mdi-view-dashboard", text: "Dashboard", route: "/" },
         { icon: "mdi-folder", text: "My Projects", route: "/projects" },
-        { icon: "mdi-account", text: "Team", route: "/team" }
+        { icon: "mdi-credit-card-outline", text: "Payment", route: "/payment" }
       ]
     };
   }
@@ -68,11 +68,11 @@ export default {
 @import "src/styles/style.scss";
 
 .v-toolbar {
-  width: 75%;
+//   width: 75%;
   margin: auto;
   border: solid white 2px;
-  border-bottom-left-radius: 90px !important;
-  border-bottom-right-radius: 90px !important;
+/*   border-bottom-left-radius: 90px !important;
+  border-bottom-right-radius: 90px !important; */
 }
 
 .toolbar-center {
