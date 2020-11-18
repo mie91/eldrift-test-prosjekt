@@ -23,7 +23,7 @@
             <div class="caption elblue--text">Project Title</div>
             <div>Create a new website</div>
           </v-col>
-           <v-col cols="6" sm="4" md="2">
+          <v-col cols="6" sm="4" md="2">
             <div class="caption elblue--text">Person</div>
             <div>Marie Helen Berger</div>
           </v-col>
@@ -37,12 +37,9 @@
           </v-col>
         </v-row>
       </v-card>
-
-     
     </v-container>
   </div>
 </template>
-
 
 <script>
 export default {};

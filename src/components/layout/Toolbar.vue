@@ -68,10 +68,10 @@ export default {
 @import "src/styles/style.scss";
 
 .v-toolbar {
-//   width: 75%;
+  //   width: 75%;
   margin: auto;
   border: solid white 2px;
-/*   border-bottom-left-radius: 90px !important;
+  /*   border-bottom-left-radius: 90px !important;
   border-bottom-right-radius: 90px !important; */
 }
 
