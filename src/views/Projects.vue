@@ -2,8 +2,8 @@
   <div class="projects">
     <v-container my-5>
       <h1 class="elblue--text">Projects</h1>
-      <v-card class="pa-3 ma-2" v-for="project in projects" :key="project.title">
-        <v-row>
+      <v-card tile class="px-3 ma-1" v-for="project in projects" :key="project.title">
+        <v-row :class="`pl-3 project ${project.status}`"> 
           <v-col cols="12" md="6">
             <div class="caption elblue--text">Project Title</div>
             <div>{{ project.title }}</div>
@@ -44,4 +44,19 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss">
+
+.project.complete {
+  border-left: 4px solid $elgreen;
+}
+
+.project.ongoing {
+  border-left: 4px solid $elblue;
+}
+
+.project.overdue {
+  border-left: 4px solid $elyellow;
+}
+
+
+</style>
