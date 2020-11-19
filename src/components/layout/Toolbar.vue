@@ -2,7 +2,7 @@
   <nav>
     <v-app-bar prominent flat app>
       <v-btn class="app-bar-btn" elevation="10">
-        <v-icon x-large color="elgreen">mdi-flag</v-icon>
+        <v-icon  color="elgreen">mdi-flag</v-icon>
         <span>Språk</span>
       </v-btn>
       <v-spacer></v-spacer>
@@ -24,7 +24,7 @@
       </div>
       <v-spacer></v-spacer>
       <v-btn class="app-bar-btn" elevation="10">
-        <v-icon x-large color="elblue">mdi-information-outline</v-icon>
+        <v-icon color="elblue">mdi-information-outline</v-icon>
         <span>Hjelp</span>
       </v-btn>
     </v-app-bar>
@@ -67,13 +67,13 @@ export default {
 <style lang="scss" scoped>
 @import "src/styles/style.scss";
 
-.v-toolbar {
-  //   width: 75%;
-  margin: auto;
-  border: solid white 2px;
-  /*   border-bottom-left-radius: 90px !important;
-  border-bottom-right-radius: 90px !important; */
-}
+/* .v-toolbar {
+    width: 75%;
+    margin: auto;
+    border: solid white 2px;
+    border-bottom-left-radius: 90px !important;
+    border-bottom-right-radius: 90px !important;
+} */
 
 .toolbar-center {
   text-align: center;

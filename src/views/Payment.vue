@@ -2,19 +2,22 @@
   <div class="payments">
     <v-container my-5>
       <h1 class="elblue--text">Payments</h1>
-      
+
       <v-row flex class="ma-2 ">
-        <v-btn  small flat class="mr-1" @click="sortBy('amount')">
-          <v-icon left >mdi-cash</v-icon>
+        <v-btn small class="mr-1" @click="sortBy('amount')">
+          <v-icon left>mdi-credit-card</v-icon>
           <span>By amount</span>
         </v-btn>
-        <v-btn small flat class="ml-1" @click="sortBy('person')">
+        <v-btn small class="ml-1" @click="sortBy('person')">
           <v-icon left>mdi-account</v-icon>
           <span>By person</span>
         </v-btn>
+        <v-btn small class="ml-1" @click="sortBy('status')">
+          <v-icon left>mdi-check</v-icon>
+          <span>By Status</span>
+        </v-btn>
       </v-row>
 
-      
       <v-card
         tile
         class="px-3 ma-1"
@@ -22,7 +25,6 @@
         :key="payment.name"
       >
         <v-row :class="`pl-3 payment ${payment.status}`">
-          
           <v-col cols="6" sm="4" md="2">
             <div class="caption elblue--text">Person</div>
             <div>{{ payment.person }}</div>
@@ -37,7 +39,7 @@
           </v-col>
           <v-col cols="6" sm="2" md="2">
             <div>
-                <div class="caption elblue--text">Staus</div>
+              <div class="caption elblue--text">Staus</div>
               <v-chip :class="`${payment.status}`">
                 {{ payment.status }}
               </v-chip>
@@ -85,6 +87,14 @@ export default {
           status: "overdue",
           content:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!"
+        },
+        {
+          amount: 0,
+          person: "Lars",
+          due: "9th Sep 2019",
+          status: "canceled",
+          content:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!"
         }
       ]
     };
@@ -110,6 +120,10 @@ export default {
   border-left: 4px solid $elyellow;
 }
 
+.payment.canceled {
+  border-left: 4px solid $elred;
+}
+
 .theme--light.v-chip.complete:not(.v-chip--active) {
   background: $elgreen;
 }
@@ -120,5 +134,9 @@ export default {
 
 .theme--light.v-chip.overdue:not(.v-chip--active) {
   background: $elyellow;
+}
+
+.theme--light.v-chip.canceled:not(.v-chip--active) {
+  background: $elred;
 }
 </style>

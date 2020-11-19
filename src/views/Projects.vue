@@ -2,9 +2,9 @@
   <div class="projects">
     <v-container my-5>
       <h1 class="elblue--text">Projects</h1>
-      
+
       <v-row flex class="ma-2 ">
-        <v-btn  small flat class="mr-1" @click="sortBy('title')">
+        <v-btn small flat class="mr-1" @click="sortBy('title')">
           <v-icon left small>mdi-folder</v-icon>
           <span>By project name</span>
         </v-btn>
@@ -14,7 +14,6 @@
         </v-btn>
       </v-row>
 
-      
       <v-card
         tile
         class="px-3 ma-1"
