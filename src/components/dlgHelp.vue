@@ -115,29 +115,34 @@
           </v-row>
           <v-row>
             <v-col cols="12" justify="center">
-                <v-expansion-panels accordion focusable>
-                    <v-expansion-panel :key="i">
+                <v-expansion-panels focusable>
+                    <v-expansion-panel>
                         <v-expansion-panel-header>
                         <h3 >Spørsmål 1</h3>
                     </v-expansion-panel-header>
                     <v-expansion-panel-content>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor illo accusamus esse aliquam in iusto nulla, dolorem ut, sint tenetur est ex quos, doloribus consectetur ipsa similique debitis! Doloremque, suscipit!</p>
                     </v-expansion-panel-content>
                     </v-expansion-panel>
-                    <v-expansion-panel :key="i">
+                    <v-expansion-panel >
                         <v-expansion-panel-header>
                        <h3>Spørsmål 2</h3>
                     </v-expansion-panel-header>
                     <v-expansion-panel-content>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque corrupti voluptatum perspiciatis, voluptatibus et nulla nihil quia at, adipisci molestias maxime porro. Similique, libero dolorum. Suscipit quam officia iure cum?
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi optio nostrum magnam quos voluptate? Eum repudiandae incidunt minima, saepe aperiam officiis vero. Nostrum fuga nesciunt ea quaerat voluptatum quisquam cum.</p>
+                        <h4>Overskrift</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, nostrum? Perferendis amet, quibusdam eius modi minus tenetur, facilis harum laborum saepe sunt libero non qui enim molestias earum reiciendis ratione.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex excepturi dolore nesciunt nisi voluptate libero veniam facilis, et doloribus voluptatem expedita, tempore quidem maxime perferendis. Voluptates culpa quam totam eligendi.</p>
                     </v-expansion-panel-content>
                     </v-expansion-panel>
-                    <v-expansion-panel :key="i">
+                    <v-expansion-panel>
                         <v-expansion-panel-header>
                         <h3>Spørsmål 3</h3>
                     </v-expansion-panel-header>
                     <v-expansion-panel-content>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate consequuntur totam tempore provident, natus ea dolor, assumenda quos ad dolorem error quaerat magni explicabo ratione recusandae veritatis nihil labore maiores.
+                       <p>Tenetur est ex quos, doloribus consectetur ipsa similique debitis! Doloremque, suscipit!</p>
+                       <h4>Overskrift</h4>
+                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo praesentium iste, delectus dolorem adipisci commodi aliquid. Deleniti illum, iure dolorem adipisci, in quisquam eius eveniet ducimus dolores eligendi, et autem!</p>
                     </v-expansion-panel-content>
                     </v-expansion-panel>
                 </v-expansion-panels>
