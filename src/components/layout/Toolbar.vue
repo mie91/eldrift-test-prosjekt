@@ -1,17 +1,14 @@
 <template>
   <nav>
-    <v-app-bar prominent flat app>
+    <v-app-bar prominent app>
+       
       <v-btn class="app-bar-btn" elevation="10">
         <v-icon  color="elgreen">mdi-flag</v-icon>
         <span>Språk</span>
       </v-btn>
       <v-spacer></v-spacer>
       <div class="toolbar-center">
-        <v-app-bar-nav-icon
-          medium
-          class="elblue--text"
-          @click="drawer = !drawer"
-        ></v-app-bar-nav-icon>
+        <h6>17.11.2020</h6>
         <v-img
           alt="Eldrift Logo"
           class="shrink toolbar-logo"
@@ -20,7 +17,12 @@
           transition="scale-transition"
           width="200"
         />
-        <h3>14:32</h3>
+        <h4>14:32</h4>
+        <v-app-bar-nav-icon
+          medium
+          class="elblue--text"
+          @click="drawer = !drawer"
+        ></v-app-bar-nav-icon>
       </div>
       <v-spacer></v-spacer>
       <v-btn class="app-bar-btn" elevation="10">
@@ -60,7 +62,7 @@ export default {
         { icon: "mdi-credit-card-outline", text: "Payment", route: "/payment" }
       ]
     };
-  }
+  },
 };
 </script>
 
