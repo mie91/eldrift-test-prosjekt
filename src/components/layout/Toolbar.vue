@@ -3,38 +3,33 @@
     <v-app-bar prominent app>
       <v-container>
         <v-row>
-          <dlgLanguage/>
-        
-      <v-spacer></v-spacer>
-      <div class="toolbar-center">
-        <h6>17.11.2020</h6>
-        <v-img
-          alt="Eldrift Logo"
-          class="shrink toolbar-logo"
-          contain
-          :src="require('@/assets/images/logos/horisontal-original-medium.png')"
-          transition="scale-transition"
-          width="200"
-        />
-        <h4>14:32</h4>
-        <v-app-bar-nav-icon
-          medium
-          class="elblue--text"
-          @click="drawer = !drawer"
-        ></v-app-bar-nav-icon>
-      </div>
-      <v-spacer></v-spacer>
-      <div class="nav-btn">
-                <v-icon large class="nav-icon nav-icon-blue" color="white">
-                  mdi-information-outline
-                </v-icon>
-                <div>Hjelp</div>
-              </div>
-      </v-row>
+          <dlgLanguage />
+          <v-spacer></v-spacer>
+          <div class="toolbar-center">
+            <h6>17.11.2020</h6>
+            <v-img
+              alt="Eldrift Logo"
+              class="shrink toolbar-logo"
+              contain
+              :src="
+                require('@/assets/images/logos/horisontal-original-medium.png')
+              "
+              transition="scale-transition"
+              width="200"
+            />
+            <h4>14:32</h4>
+            <v-app-bar-nav-icon
+              medium
+              class="elblue--text"
+              @click="drawer = !drawer"
+            ></v-app-bar-nav-icon>
+          </div>
+          <v-spacer></v-spacer>
+          <dlgHelp />
+        </v-row>
       </v-container>
-     
     </v-app-bar>
-    
+
     <v-navigation-drawer app v-model="drawer" class="elblue">
       <v-list>
         <v-list-item
@@ -53,15 +48,16 @@
       </v-list>
     </v-navigation-drawer>
   </nav>
-
 </template>
 
 <script lang="ts">
 import dlgLanguage from "../dlgLanguage.vue";
+import dlgHelp from "../dlgHelp.vue";
 
 export default {
   components: {
-    dlgLanguage
+    dlgLanguage,
+    dlgHelp
   },
 
   name: "Toolbar",
@@ -74,7 +70,7 @@ export default {
         { icon: "mdi-credit-card-outline", text: "Payment", route: "/payment" }
       ]
     };
-  },
+  }
 };
 </script>
 
@@ -98,7 +94,6 @@ export default {
 .app-bar-btn {
   font-size: 18px;
 }
-
 
 .nav-icon {
   padding: 10px;

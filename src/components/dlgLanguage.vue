@@ -1,45 +1,83 @@
 <template>
-  <v-dialog max-width="500px" v-model="dialog">
-      <template v-slot:activator="{ on }" class="nav-btn">
-          <div v-on="on" >
-              <v-icon  class="nav-icon nav-icon-green" color="white" large>
-                  mdi-flag
-                </v-icon>
-               <p>Språk</p>
-          </div>
-                
-              </template>
-      <v-card>
-      <v-card-title>
-          <h2>Språkvalg</h2>
-      </v-card-title>
-      <v-btn class="accept-btn" elevation="10" text @click="dialog = false"> Ok</v-btn>
-      </v-card>
+  <v-dialog
+    max-width="600px"
+    v-model="dialog"
+    transition="dialog-bottom-transition"
+  >
+    <template v-slot:activator="{ on }">
+      <div v-on="on" class="nav-btn">
+        <v-icon class="nav-icon nav-icon-green" color="white" large>
+          mdi-flag
+        </v-icon>
+        <p>Språk</p>
+      </div>
+    </template>
+    <v-card class="pa-3">
+      <v-container>
+        <v-row>
+          <v-col cols="12" justify="center" align="center">
+            <h1>Velg Språk</h1>
+            <v-list rounded >
+                <v-list-item-group
+                v-model="selectedLanguage"
+                color="elgreen">
+
+                    <v-list-item
+                    
+                    class="my-3 rounded elgrey elevation-3"
+                    v-for="language in languages"
+                    :key="language.type" @click="dialog = false">
+
+                        <v-list-item-content
+                        :class="`language ${language.available}`">
+                            <h3>{{ language.type }}</h3>
+                        </v-list-item-content>
+
+                    </v-list-item>
+
+                </v-list-item-group>
+
+            </v-list>
+           
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-card>
   </v-dialog>
 </template>
 
 <script>
-    export default {
-        name: "dlgLanguage",
-        data() {
-            return {
-                dialog: false,
-            }
+export default {
+  name: "dlgLanguage",
+  data() {
+    return {
+      dialog: false,
+      selectedLanguage: 1,
+      languages: [
+        {
+          type: "Norwegian",
+          available: "available",
+          icon: ""
         },
-    }
+        {
+          type: "English",
+          available: "unavailable",
+          icon: ""
+        },
+        {
+          type: "Spanish",
+          available: "unavailable",
+          icon: ""
+        }
+      ]
+    };
+  }
+};
 </script>
 
 <style lang="scss">
-.nav-icon {
-  padding: 10px;
-  border-radius: 50%;
-
-  &-green {
-    background-color: $elgreen;
-  }
-
-  &-blue {
-    background-color: $elblue;
-  }
+.language.unavailable {
+  color: rgba(29, 29, 29, 0.3);
 }
+
 </style>

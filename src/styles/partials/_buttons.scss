@@ -12,3 +12,29 @@
     background-color: $elgreen;
     color: $elwhite;
   }
+
+
+  //Navigation Buttons//
+
+.nav-btn {
+  cursor: pointer;
+  
+}
+
+.nav-icon {
+padding: 10px;
+border-radius: 50%;
+
+  &-green {
+    background-color: $elgreen;
+  }
+
+  &-blue {
+    background-color: $elblue;
+  }
+
+  &:active, &:hover {
+    transition-timing-function: ease-in-out;
+    background-color: $elgrey;
+  }
+}

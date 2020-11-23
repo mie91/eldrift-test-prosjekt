@@ -1,8 +1,8 @@
 <template>
   <v-app>
     <Toolbar />
-    <v-main mx-4 mb-4>
-      <router-view></router-view>
+    <v-main>
+      <router-view ></router-view>
     </v-main>
   </v-app>
 </template>
