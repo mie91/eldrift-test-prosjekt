@@ -1,11 +1,10 @@
 <template>
   <nav>
     <v-app-bar prominent app>
-       
-      <v-btn class="app-bar-btn" elevation="10">
-        <v-icon  color="elgreen">mdi-flag</v-icon>
-        <span>Språk</span>
-      </v-btn>
+      <v-container>
+        <v-row>
+          <dlgLanguage/>
+        
       <v-spacer></v-spacer>
       <div class="toolbar-center">
         <h6>17.11.2020</h6>
@@ -25,11 +24,17 @@
         ></v-app-bar-nav-icon>
       </div>
       <v-spacer></v-spacer>
-      <v-btn class="app-bar-btn" elevation="10">
-        <v-icon color="elblue">mdi-information-outline</v-icon>
-        <span>Hjelp</span>
-      </v-btn>
+      <div class="nav-btn">
+                <v-icon large class="nav-icon nav-icon-blue" color="white">
+                  mdi-information-outline
+                </v-icon>
+                <div>Hjelp</div>
+              </div>
+      </v-row>
+      </v-container>
+     
     </v-app-bar>
+    
     <v-navigation-drawer app v-model="drawer" class="elblue">
       <v-list>
         <v-list-item
@@ -48,10 +53,17 @@
       </v-list>
     </v-navigation-drawer>
   </nav>
+
 </template>
 
 <script lang="ts">
+import dlgLanguage from "../dlgLanguage.vue";
+
 export default {
+  components: {
+    dlgLanguage
+  },
+
   name: "Toolbar",
   data() {
     return {
@@ -77,14 +89,27 @@ export default {
     border-bottom-right-radius: 90px !important;
 } */
 
-.toolbar-center {
+.v-app-bar {
   text-align: center;
 }
 .toolbar-logo {
   margin: auto;
 }
-
 .app-bar-btn {
   font-size: 18px;
+}
+
+
+.nav-icon {
+  padding: 10px;
+  border-radius: 50%;
+
+  &-green {
+    background-color: $elgreen;
+  }
+
+  &-blue {
+    background-color: $elblue;
+  }
 }
 </style>
