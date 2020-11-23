@@ -1,6 +1,6 @@
 
 
-@mixin basic-btn {
+/* @mixin basic-btn {
     
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -11,10 +11,36 @@
     @include basic-btn;
     background-color: $elgreen;
     color: $elwhite;
+  } */
+
+// Basic Buttons
+.basic-btn {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 50px;
+
+  &-green {
+    background-color: $elgreen;
+    color: $elwhite;
   }
 
+  &-blue {
+    background-color: $elblue;
+    color: $elwhite;
+  }
 
-  //Navigation Buttons//
+  &-red {
+    background-color: $elred;
+    color: $elwhite;
+  }
+
+  &-yellow {
+    background-color: $elyellow;
+    color: $elblack;
+  }
+}
+
+//Navigation Buttons//
 
 .nav-btn {
   cursor: pointer;

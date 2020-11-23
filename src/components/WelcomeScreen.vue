@@ -8,7 +8,7 @@
       </v-row>
       <v-row>
         <v-col cols="12" justify="center" align="center">
-          <div class="chargeAnimation">
+          <div>
             <v-img
               class="chargeImage"
               alt="Charge Icon"
