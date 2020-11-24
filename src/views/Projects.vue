@@ -4,11 +4,11 @@
       <h1 class="elblue--text">Projects</h1>
 
       <v-row flex class="ma-2 ">
-        <v-btn small flat class="mr-1" @click="sortBy('title')">
+        <v-btn small class="mr-1" @click="sortBy('title')">
           <v-icon left small>mdi-folder</v-icon>
           <span>By project name</span>
         </v-btn>
-        <v-btn small flat class="ml-1" @click="sortBy('person')">
+        <v-btn small class="ml-1" @click="sortBy('person')">
           <v-icon left small>mdi-account</v-icon>
           <span>By person</span>
         </v-btn>
@@ -53,7 +53,7 @@ export default {
       projects: [
         {
           title: "Design a new website",
-          person: "The Net Ninja",
+          person: "Marie",
           due: "1st Jan 2019",
           status: "ongoing",
           content:

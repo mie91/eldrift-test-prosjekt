@@ -17,7 +17,7 @@
               transition="scale-transition"
               width="200"
             />
-            <h4>14:32</h4>
+            <h5>14:32</h5>
             <v-app-bar-nav-icon
               medium
               class="elblue--text"

@@ -1,7 +1,7 @@
 <template>
-<!--     // Dialog box number 1 - Languages - Main Menu // -->
+  <!--     // Dialog box number 1 - Languages - Main Menu // -->
   <v-dialog
-    max-width="800px"
+    max-width="600px"
     v-model="dialog"
     transition="dialog-bottom-transition"
     overlay-color="elblack"
@@ -21,10 +21,10 @@
           <v-col cols="12" justify="center" align="center">
             <h1>Velg Språk</h1>
             <v-list rounded>
-              <v-list-item-group v-model="selectedLanguage" color="elgreen">
+              <v-list-item-group>
                 <v-list-item
                   class="my-3 rounded elgrey elevation-3"
-                  v-for="language in languages"
+                  v-for="language in languages.slice(0, 2)"
                   :key="language.type"
                   @click="dialog = false"
                 >
@@ -84,6 +84,6 @@ export default {
 <style lang="scss">
 .language.unavailable {
   color: rgba(29, 29, 29, 0.3);
-  cursor:not-allowed;
+  cursor: not-allowed;
 }
 </style>
